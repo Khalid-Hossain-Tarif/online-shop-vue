@@ -13,12 +13,10 @@ const singleProduct = computed(() => {
 </script>
 
 <template>
-  {{ singleProduct }}
-
 <!--  <button @click="router.push({name: 'catalog'})" class="inline-block bg-blue-600 px-5 py-1 mb-2 rounded text-sm text-white">Back</button>-->
 <!--  <button @click="router.back()" class="inline-block bg-blue-600 px-5 py-1 mb-2 rounded text-sm text-white">Back</button>-->
 <!--  <router-link :to="{name: 'catalog'}" class="inline-block bg-blue-600 px-5 py-1 mb-2 rounded text-sm text-white">Back</router-link>-->
-  <router-link to="/" class="inline-block bg-blue-600 px-5 py-1 mb-2 rounded text-sm text-white">Back</router-link>
+  <router-link to="/" class="inline-block bg-blue-600 px-5 py-1 mb-2 rounded text-sm text-white m-10 mb-0">Back</router-link>
 
   <div class="flex gap-10 p-10">
     <div class="w-1/3 bg-gray-100 p-8">
@@ -34,7 +32,8 @@ const singleProduct = computed(() => {
       <p><span class="font-medium">Discount: </span> {{ singleProduct?.discountPercentage }}%</p>
       <p><span class="font-medium">Stock: </span> {{ singleProduct?.stock }}</p>
       <p><span class="font-medium">Category: </span> {{ singleProduct?.category }}</p>
-      <p><span class="font-medium">Description: </span> {{ singleProduct?.description }} </p>
+      <p><span class="font-medium">Rating: </span> {{ singleProduct?.rating }}</p>
+      <p><span class="font-medium">Description: </span> {{ singleProduct?.description }}  </p>
     </div>
   </div>
 </template>

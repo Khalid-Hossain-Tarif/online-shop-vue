@@ -27,6 +27,7 @@ const goProductDetails = (id) => {
           <p><span class="font-medium">Price: </span> {{ product?.price }}</p>
           <p><span class="font-medium">Discount: </span> {{ product?.discountPercentage }}%</p>
           <p><span class="font-medium">Stock: </span> {{ product?.stock }}</p>
+          <p><span class="font-medium">Rating: </span> {{ product?.rating }}</p>
           <p><span class="font-medium">Category: </span> {{ product?.category }}</p>
         </div>
     </div>
