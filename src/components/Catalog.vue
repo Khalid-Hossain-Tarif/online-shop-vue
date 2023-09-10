@@ -1,16 +1,17 @@
 <script setup>
-import {useProductStore} from "@/stores/product-store";
+import {useProductsStore} from "@/stores/product-store";
 import {onMounted} from "vue";
 import router from "@/router";
 
-const productStore = useProductStore();
+const productStore = useProductsStore();
 
-onMounted(async () => {
-  await productStore.getProductsList();
+onMounted( () => {
+   productStore.getProductsList();
 });
 
 const goProductDetails = (id) => {
   router.push({name: 'productDetails', params: {id}});
+  console.log(typeof id);
 };
 </script>
 
