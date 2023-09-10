@@ -27,13 +27,14 @@ const singleProduct = computed(() => {
         <img :src="image" v-for="(image, index) in singleProduct?.images" :key="index" alt="" class="w-24 h-24 border border-gray-200">
       </div>
     </div>
-    <div>
+    <div class="w-2/3">
       <h1 class="mb-5 text-5xl font-bold capitalize">{{ singleProduct?.title }}</h1>
       <p><span class="font-medium">Brand: </span> {{ singleProduct?.brand }}</p>
       <p><span class="font-medium">Price: </span> {{ singleProduct?.price }}</p>
       <p><span class="font-medium">Discount: </span> {{ singleProduct?.discountPercentage }}%</p>
       <p><span class="font-medium">Stock: </span> {{ singleProduct?.stock }}</p>
       <p><span class="font-medium">Category: </span> {{ singleProduct?.category }}</p>
+      <p><span class="font-medium">Description: </span> {{ singleProduct?.description }} </p>
     </div>
   </div>
 </template>
