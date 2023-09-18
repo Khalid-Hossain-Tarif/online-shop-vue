@@ -11,7 +11,6 @@ onMounted( () => {
 
 const goProductDetails = (id) => {
   router.push({name: 'productDetails', params: {id}});
-  console.log(typeof id);
 };
 </script>
 

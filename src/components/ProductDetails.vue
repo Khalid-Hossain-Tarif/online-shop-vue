@@ -2,7 +2,6 @@
 import {useProductsStore} from "@/stores/product-store";
 import {computed} from "vue";
 import {useRoute} from "vue-router";
-import router from "@/router";
 
 const route = useRoute();
 const productStore = useProductsStore();
@@ -10,6 +9,10 @@ const productStore = useProductsStore();
 const singleProduct = computed(() => {
   return productStore.products.find((item) => item.id === Number(route.params.id));
 });
+
+const addToCart = () => {
+  productStore.addToCart(singleProduct.value);
+}
 </script>
 
 <template>
@@ -33,7 +36,8 @@ const singleProduct = computed(() => {
       <p><span class="font-medium">Stock: </span> {{ singleProduct?.stock }}</p>
       <p><span class="font-medium">Category: </span> {{ singleProduct?.category }}</p>
       <p><span class="font-medium">Rating: </span> {{ singleProduct?.rating }}</p>
-      <p><span class="font-medium">Description: </span> {{ singleProduct?.description }}  </p>
+      <p><span class="font-medium">Description: </span> {{ singleProduct?.description }}</p>
+      <button @click="addToCart" class="mt-4 inline-block bg-blue-600 px-5 py-1 mb-2 rounded text-sm text-white">Add to cart</button>
     </div>
   </div>
 </template>
