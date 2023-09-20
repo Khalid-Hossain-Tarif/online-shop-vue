@@ -12,7 +12,7 @@ const removeFromCart = (id) => {
         <h1 class="text-4xl font-bold">Cart</h1>
 
         <div v-if="productStore.cart.length < 1" class="text-center">
-            <h3 class="font-semibold mb-4">Cart is empty. Please add to cart a product......</h3>
+            <h3 class="font-semibold mb-4">Cart is empty. Please add to cart a product.......</h3>
             <router-link to="/" class="inline-block bg-blue-600 px-5 py-1 mb-2 rounded text-sm text-white">Buy a product</router-link>
         </div>
 
